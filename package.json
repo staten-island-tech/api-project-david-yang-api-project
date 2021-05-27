@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
+    "@parcel/transformer-sass": "^2.0.0-nightly.688",
+    "parcel": "^2.0.0-beta.3.1",
     "sass": "^1.26.9"
   },
   "browserslist": [
