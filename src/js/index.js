@@ -7,8 +7,10 @@ console.log("connected");
 const query = async function () {
   try {
     const response = await fetch("http://numbersapi.com/1..50");
+
     const data = await response.json();
-    console.log(data);
+    const array = Object.values(data);
+    console.log(array);
     data.results.array.forEach((element) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
@@ -21,7 +23,7 @@ const query = async function () {
         />
       </div>
       <div class="movie-card-back">
-        <h3 class="movie-card-header">The Dark Knight</h3>
+        <h3 class="movie-card-header">${element}</h3>
         <div class="score-box">
           <p class="user-score">Community Score</p>
           <p class="user-score">8.4</p>
